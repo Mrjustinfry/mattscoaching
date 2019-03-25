@@ -1,3 +1,20 @@
+
+<?php
+
+  if(isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+    $formcontent="From: $name \n Message: $message";
+    $recipient = "mrjustinfry@gmail.com";
+    $subject = "Contact Form";
+    $mailheader = "From: $email \r\n";
+      mail($recipient, $subject, $formcontent, $mailheader);
+      header("Location: index.html?mailsend");
+  }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,11 +49,11 @@
     </section>
     <section class="contactSection">
       <p>Contact form</p>
-      <form action="contact.php" method="POST">
+      <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
         <label>Name</label> <input type="text" name="name"><br />
         <label>Email</label> <input type="text" name="email"><br />
         <label>Message</label><textarea name="message" rows="6" cols="25"></textarea><br />
-        <input type="submit" value="Send"><input type="reset" value="Clear">
+        <input type="submit" value="Send" name="submit"><input type="reset" value="Clear">
       </form>
     </section>
   </main>
