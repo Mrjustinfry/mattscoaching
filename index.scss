@@ -46,6 +46,8 @@ nav {
   left: 0;
   width: 100%;
   border: 1px solid $mainColor;
+  z-index: 1;
+  background-color: white;
 }
 
 .heroSection {
