@@ -1,0 +1,68 @@
+//Colors
+$lightShade: #EAEAEA; //Off-white
+$lightAccent: #91ADE6; //Cornflower Blue
+$mainColor: #00B2FE; //Dodger Blue
+$darkShade: #03037E; //Navy Blue
+$darkAccent: #000000; //black
+
+//Fonts
+$mainFont: "Courier";
+$subFont: "Courier New";
+$accentFont: "Times New Roman";
+
+//mixins for vendors
+@mixin box-shadow($property) {
+  -webkit-box-shadow: $property;
+  -moz-box-shadow: $property;
+  -ms-box-shadow: $property;
+  -o-box-shadow: $property;
+  box-shadow: $property;
+}
+
+@mixin text-shadow($property) {
+  -webkit-text-shadow: $property;
+  -moz-text-shadow: $property;
+  -ms-text-shadow: $property;
+  -o-text-shadow: $property;
+  text-shadow: $property;
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -moz-transform: $property;
+  -ms-transform: $property;
+  -o-transform: $property;
+  transform: $property;
+}
+
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid $mainColor;
+}
+
+.heroSection {
+  height: 100vh;
+  border: 1px solid black;
+  margin-top: 4em;
+}
+
+.aboutMeSection, .planSection, .testimonialSection, .contactSection {
+  height: 20em;
+  width: 100%;
+  border: 1px dashed red;
+}
+
+.runningPlansBox, .triathalonPlansBox {
+  border: 1px dotted green;
+  display: inline-block;
+  width: 45%;
+  height: 20em;
+}
