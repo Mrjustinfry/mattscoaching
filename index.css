@@ -47,16 +47,16 @@ nav {
 }
 
 .heroSection {
-  background-image: url("bg.png");
+  background-image: url("./images/bg.png");
   background-size: cover;
   background-position: center;
   height: 100vh;
   border: 1px solid transparent;
-  -webkit-box-shadow: -1px 3px 20px 0px grey;
-  -moz-box-shadow: -1px 3px 20px 0px grey;
-  -ms-box-shadow: -1px 3px 20px 0px grey;
-  -o-box-shadow: -1px 3px 20px 0px grey;
-  box-shadow: -1px 3px 20px 0px grey;
+  -webkit-box-shadow: -1px 0px 10px 0px grey;
+  -moz-box-shadow: -1px 0px 10px 0px grey;
+  -ms-box-shadow: -1px 0px 10px 0px grey;
+  -o-box-shadow: -1px 0px 10px 0px grey;
+  box-shadow: -1px 0px 10px 0px grey;
   display: flex;
   justify-content: center;
 }
@@ -78,7 +78,30 @@ nav {
   font-size: 1rem;
 }
 
-.aboutMeSection, .planSection, .testimonialSection, .contactSection {
+.newsImg {
+  height: 10em;
+  width: 10em;
+  float: left;
+  margin: 0.5em;
+}
+
+.aboutInfo {
+  font-family: "Open Sans", sans-serif;
+  padding: 3%;
+}
+.aboutInfo p {
+  text-align: left;
+  text-indent: 1em;
+}
+
+#aboutMe {
+  font-family: "Graduate", cursive;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: underline #00d8d8;
+}
+
+.planSection, .testimonialSection, .contactSection {
   height: 100vh;
   width: 100%;
   border: 1px dashed red;
@@ -91,7 +114,18 @@ nav {
   height: 20em;
 }
 
-@media only screen and (min-width: 1224px) {
+.accent {
+  height: 2em;
+  width: 2em;
+}
+
+.bannerImgBox {
+  display: flex;
+  justify-content: space-around;
+  margin: 1em 0;
+}
+
+@media only screen and (min-width: 780px) {
   .heroQuote {
     font-size: 5rem;
   }
@@ -102,6 +136,26 @@ nav {
 
   .navLink {
     font-size: 1rem;
+  }
+
+  .aboutMeSection {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .aboutInfo {
+    flex: 2;
+  }
+
+  .accent {
+    margin: auto;
+  }
+
+  .bannerImgBox {
+    flex-flow: column;
+    margin: unset;
+    flex: 1;
   }
 }
 
