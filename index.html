@@ -80,12 +80,13 @@
       <p>Testimonials and Maybe IG</p>
     </section>
     <section class="contactSection">
-      <p>Contact form</p>
-      <form action="contact.php" method="POST">
-        <label>Name</label> <input type="text" name="name"><br />
-        <label>Email</label> <input type="text" name="email"><br />
-        <label>Message</label><textarea name="message" rows="6" cols="25"></textarea><br />
-        <input type="submit" value="Send" name="submit"><input type="reset" value="Clear">
+      <h2 class="contactHeader">Contact Matt</h2>
+      <form action="contact.php" method="POST" class="contactForm">
+        <label><input type="text" name="name" class="inputText inputs" placeholder="Name *"></label><br />
+        <label><input type="text" name="email" class="inputText inputs" placeholder="Email *"></label><br />
+        <label><input type="tel" name="phone" class="inputText inputs" placeholder="Phone"></label><br />
+        <label></label><textarea name="message" rows="6" cols="25" class="inputTextArea inputs" placeholder="Message"></textarea><br />
+        <input type="submit" value="Send" name="submit" class="btns"><input type="reset" value="Clear" class="btns">
       </form>
     </section>
   </main>
