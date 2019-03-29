@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  text-align: center;
 }
 
 body {
@@ -15,7 +14,7 @@ nav {
   z-index: 1;
   background-color: black;
   display: flex;
-  border-bottom: 2px solid #82b59c;
+  border-bottom: 2px solid #00d8d8;
 }
 
 .navList {
@@ -28,7 +27,7 @@ nav {
 }
 
 .navLink {
-  color: #82b59c;
+  color: #00d8d8;
   margin: auto;
   font-family: "Graduate", cursive;
   font-size: 0.7rem;
@@ -38,8 +37,8 @@ nav {
   cursor: pointer;
   color: #EAEAEA;
   text-decoration-line: underline;
-  text-decoration-color: #82b59c;
-  transition-duration: 1s;
+  text-decoration-color: #00d8d8;
+  transition-duration: 500ms;
 }
 
 .navLogo {
@@ -72,6 +71,7 @@ nav {
   -o-text-shadow: 3px 3px 7px black;
   text-shadow: 3px 3px 7px black;
   font-weight: 100;
+  text-align: center;
 }
 
 .author {
@@ -80,7 +80,6 @@ nav {
 
 .newsImg {
   height: 10em;
-  width: 10em;
   float: left;
   margin: 0.5em;
 }
@@ -101,7 +100,7 @@ nav {
   text-decoration: underline #00d8d8;
 }
 
-.planSection, .testimonialSection, .contactSection {
+.planSection, .testimonialSection {
   height: 100vh;
   width: 100%;
   border: 1px dashed red;
@@ -125,6 +124,41 @@ nav {
   margin: 1em 0;
 }
 
+.contactSection {
+  display: flex;
+}
+
+.contactForm {
+  flex: 1;
+  margin: auto;
+  text-align: center;
+}
+
+.inputs {
+  margin: 5%;
+  width: 80%;
+}
+
+input::placeholder {
+  color: white;
+}
+
+textarea::placeholder {
+  color: white;
+}
+
+.btns {
+  width: 45%;
+  margin: 2%;
+  height: 3em;
+}
+
+.contactHeader {
+  padding: 3%;
+  float: left;
+  font-family: "Graduate", cursive;
+}
+
 @media only screen and (min-width: 780px) {
   .heroQuote {
     font-size: 5rem;
@@ -138,10 +172,15 @@ nav {
     font-size: 1rem;
   }
 
+  .newsImg {
+    height: 16em;
+  }
+
   .aboutMeSection {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    text-align: center;
   }
 
   .aboutInfo {
@@ -157,6 +196,22 @@ nav {
     margin: unset;
     flex: 1;
   }
+}
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #EAEAEA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00d8d8;
+  border-radius: 1em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: white;
 }
 
 /*# sourceMappingURL=index.css.map */
