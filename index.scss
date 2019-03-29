@@ -2,6 +2,7 @@
 $lightShade: #EAEAEA; //Off-white
 $lightAccent: #91ADE6; //Cornflower Blue
 $mainColor: #00B2FE; //Dodger Blue
+$altMainColor: #82b59c; //green
 $darkShade: #03037E; //Navy Blue
 $darkAccent: #000000; //black
 
@@ -40,24 +41,75 @@ $accentFont: "Times New Roman";
   text-align: center;
 }
 
+body {
+  margin: 0;
+}
+
 nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  border: 1px solid $mainColor;
   z-index: 1;
-  background-color: white;
+  background-color: black;
+  display: flex;
+  border-bottom: 2px solid $altMainColor;
+}
+
+.navList {
+  list-style: none;
+  display: inline-flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: .2em;
+  padding: 0;
+}
+
+.navLink {
+  color: $altMainColor;
+  margin: auto;
+  font-family: 'Graduate', cursive;
+  font-size: .7rem;
+}
+
+.navLink:hover {
+  cursor: pointer;
+  color: $lightShade;
+  text-decoration-line: underline;
+  text-decoration-color: $altMainColor;
+  transition-duration: 1s;
+}
+
+.navLogo {
+  height: 3em;
 }
 
 .heroSection {
+  background-image: url('bg.png');
+  background-size: cover;
+  background-position: center;
   height: 100vh;
-  border: 1px solid black;
-  margin-top: 4em;
+  border: 1px solid transparent;
+  @include box-shadow(-1px 3px 20px 0px grey);
+  display: flex;
+  justify-content: center;
+}
+
+.heroQuote {
+  color: $lightShade;
+  font-size: 2rem;
+  margin: auto;
+  font-family: 'Mrs Sheppards', cursive;
+  @include text-shadow(3px 3px 7px black);
+  font-weight: 100;
+}
+
+.author {
+  font-size: 1rem;
 }
 
 .aboutMeSection, .planSection, .testimonialSection, .contactSection {
-  height: 20em;
+  height: 100vh;
   width: 100%;
   border: 1px dashed red;
 }
@@ -67,4 +119,19 @@ nav {
   display: inline-block;
   width: 45%;
   height: 20em;
+}
+
+//desktop
+@media only screen  and (min-width : 1224px) {
+  .heroQuote {
+    font-size: 5rem;
+  }
+
+  .author {
+    font-size: 2rem;
+  }
+
+  .navLink {
+    font-size: 1rem;
+  }
 }
