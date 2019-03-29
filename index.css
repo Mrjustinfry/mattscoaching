@@ -3,22 +3,83 @@
   text-align: center;
 }
 
+body {
+  margin: 0;
+}
+
 nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  border: 1px solid #00B2FE;
+  z-index: 1;
+  background-color: black;
+  display: flex;
+  border-bottom: 2px solid #82b59c;
+}
+
+.navList {
+  list-style: none;
+  display: inline-flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0.2em;
+  padding: 0;
+}
+
+.navLink {
+  color: #82b59c;
+  margin: auto;
+  font-family: "Graduate", cursive;
+  font-size: 0.7rem;
+}
+
+.navLink:hover {
+  cursor: pointer;
+  color: #EAEAEA;
+  text-decoration-line: underline;
+  text-decoration-color: #82b59c;
+  transition-duration: 1s;
+}
+
+.navLogo {
+  height: 3em;
 }
 
 .heroSection {
+  background-image: url("bg.png");
+  background-size: cover;
+  background-position: center;
   height: 100vh;
-  border: 1px solid black;
-  margin-top: 4em;
+  border: 1px solid transparent;
+  -webkit-box-shadow: -1px 3px 20px 0px grey;
+  -moz-box-shadow: -1px 3px 20px 0px grey;
+  -ms-box-shadow: -1px 3px 20px 0px grey;
+  -o-box-shadow: -1px 3px 20px 0px grey;
+  box-shadow: -1px 3px 20px 0px grey;
+  display: flex;
+  justify-content: center;
+}
+
+.heroQuote {
+  color: #EAEAEA;
+  font-size: 2rem;
+  margin: auto;
+  font-family: "Mrs Sheppards", cursive;
+  -webkit-text-shadow: 3px 3px 7px black;
+  -moz-text-shadow: 3px 3px 7px black;
+  -ms-text-shadow: 3px 3px 7px black;
+  -o-text-shadow: 3px 3px 7px black;
+  text-shadow: 3px 3px 7px black;
+  font-weight: 100;
+}
+
+.author {
+  font-size: 1rem;
 }
 
 .aboutMeSection, .planSection, .testimonialSection, .contactSection {
-  height: 20em;
+  height: 100vh;
   width: 100%;
   border: 1px dashed red;
 }
@@ -28,6 +89,20 @@ nav {
   display: inline-block;
   width: 45%;
   height: 20em;
+}
+
+@media only screen and (min-width: 1224px) {
+  .heroQuote {
+    font-size: 5rem;
+  }
+
+  .author {
+    font-size: 2rem;
+  }
+
+  .navLink {
+    font-size: 1rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
